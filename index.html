@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> حسن العمدة</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/min.css">
+    
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="navbar__left">
+        <div class="pulse">
+          <span class="dot"></span>
+          <span class="text">عروض حصرية اليوم</span>
+          
+        </div>
+      </div>
+      <div class="navbar__right">
+        <img class="logo" src="./img/Allcouponat-discount-codes-1200-628-removebg-preview.png"FreshCart Logo" />
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="container">
+      <h1 class="title">أكواد خصم جاهزة للاستخدام</h1>
+
+      <section class="grid">
+        <!-- Card 1 -->
+        <article class="card">
+          <div class="brand">
+             <img src="./img/Defaktw.png" alt="Brand" />
+          </div>
+          <div class="info">
+            <h3 class="brand__name">خصم ديفاكتو مصر والمغرب </h3>
+            <p class="code" data-code="Ad213">Ad213</p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card">
+          <div class="brand alt">
+            <img src="./img/H_and_M.png" alt="M.png">
+          </div>
+          <div class="info">
+            <h3 class="brand__name">خصم اتش اند ام الخليج </h3>
+            <p class="code" data-code="DNF4">DNF4</p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card">
+          <div class="brand alt">
+            <img src="./img/nmsh2.jpg" alt="/namshe.png">
+          </div>
+          <div class="info">
+            <h3 class="brand__name">خصم نمشي </h3>
+            <p class="code" data-code="ADT32">ADT32</p>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card">
+          <div class="brand alt">
+            <img src="./img/non3.png" alt="non.jfif">
+          </div>
+          <div class="info">
+            <h3 class="brand__name">خصم نون مصر</h3>
+            <p class="code" data-code="OM4705">OM470</p>
+          </div>
+        </article>
+
+         <article class="card">
+          <div class="brand alt">
+            <img src="./img/non3.png" alt="non.jfif">
+          </div>
+          <div class="info">
+            <h3 class="brand__name">خصم نون الخليج</h3>
+            <p class="code" data-code="ADT83">ADT83</p>
+          </div>
+        </article>
+
+        
+       
+      </section>
+
+      <p class="hint">اضغط على الكود للنسخ</p>
+    </main>
+
+    <footer class="footer">© <span id="">
+      <i class="bi bi-emoji-wink-fill"></i>
+    </span> حسن ابن العمدة</footer>
+
+    <script>
+      // copy on click
+      document.querySelectorAll('.code').forEach(function (el) {
+        el.addEventListener('click', function () {
+          var code = el.getAttribute('data-code') || el.textContent.trim();
+          navigator.clipboard.writeText(code).then(function () {
+            el.classList.add('copied');
+            el.textContent = 'تم النسخ!';
+            setTimeout(function () {
+              el.classList.remove('copied');
+              el.textContent = code;
+            }, 1200);
+          });
+        });
+      });
+
+      // year
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+
